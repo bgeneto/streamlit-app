@@ -1,6 +1,6 @@
 # streamlit-app
 
-Bootstrap your first [Streamlit](https://streamlit.io) in seconds 
+Bootstrap your first [Streamlit](https://streamlit.io) web application in seconds 
 using this docker container with dependencies like pandas, numpy, matplotlib, plotly... already installed.
 
 # Instructions 
