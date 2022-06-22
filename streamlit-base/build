@@ -17,6 +17,6 @@ docker build -t streamlit-base -f Dockerfile .
 docker tag streamlit-base:latest ${TAG}
 
 # upload to local registry
-if [ "$REG" -neq "0" ]; then
+if [ "$REG" -ne "0" ]; then
     docker push ${TAG}
 fi
