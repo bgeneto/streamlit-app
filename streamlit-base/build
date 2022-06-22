@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# build docker image
+docker build -t streamlit-base -f Dockerfile .
+
+# tag docker image
+docker image tag streamlit-base:latest localhost:5000/streamlit/streamlit-base:latest
+
+# upload to local registry 
+docker image push localhost:5000/streamlit/streamlit-base:latest
