@@ -1,10 +1,22 @@
 #!/bin/bash
 
+# use local docker registry
+REG=1
+TAG=localhost:5000/streamlit/streamlit-base:latest
+
+# do not use registry
+if [ ! -z "$1" ]; then
+    TAG=streamlit-base:latest
+    REG=0
+fi
+
 # build docker image
 docker build -t streamlit-base -f Dockerfile .
 
 # tag docker image
-docker image tag streamlit-base:latest localhost:5000/streamlit/streamlit-base:latest
+docker tag streamlit-base:latest ${TAG}
 
-# upload to local registry 
-docker image push localhost:5000/streamlit/streamlit-base:latest
+# upload to local registry
+if [ "$REG" -neq "0" ]; then
+    docker push ${TAG}
+fi
