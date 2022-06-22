@@ -23,7 +23,7 @@ cd streamlit-app/streamlit-base
 ```
 
 If you don't have a localhost docker registry running, 
-then issue the following command instead to avoid uploading this image to your local registry: 
+then issue the following command instead to avoid uploading this image to a non-existing local registry: 
 
 ```bash
 cd streamlit-app/streamlit-base
