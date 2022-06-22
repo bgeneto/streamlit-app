@@ -26,22 +26,23 @@ If you don't have a localhost docker registry running,
 then issue the following command instead to avoid uploading this image to a non-existing local registry: 
 
 ```bash
-cd streamlit-app/streamlit-base
-./build --no-registry
+./build --no-reg
 ```
 
 You can also edit files `packages.txt` and `requirements.txt` to add the packages and 
-software that is required to your container. 
+softwares that are required in your container. 
 
 ## Build your app image
 
-Now build the main app image/container. Edit the `.env` file in the root dir and then call docker compose. 
-The provided `docker-compose.yml` file uses [autoheal](https://github.com/willfarrell/docker-autoheal) to monitor container status. 
+Now we are ready to build the main app image/container. 
+But first edit the `.env` file in the root dir and then call docker compose. 
 
 ```
 cd .. 
 docker compose up 
-``` 
+```
 
+ > **_Note:_**
+The provided `docker-compose.yml` are ready to use but it depends on [autoheal](https://github.com/willfarrell/docker-autoheal) to monitor your streamlit container status. Just remember to run the autoheal container beforehand with `AUTOHEAL_CONTAINER_LABEL=autoheal`.
 
 
