@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
-"""Experimento do Prof. Mauro."""
+"""main.py streamlit page"""
 
 import itertools
 import math
